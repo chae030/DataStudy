@@ -14,7 +14,7 @@ jobs:
         with:
           payload: |
             {
-              "text": "🚀 chaeyeon 브랜치에 push 됐어요! 확인해보세요."
+              "text": "📌 New push to chaeyeon branch!"
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

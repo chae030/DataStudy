@@ -14,7 +14,7 @@ jobs:
         with:
           payload: |
             {
-              "text": "📌 New push to chaeyeon branch!"
+              "text": "1 new commit pushed to chaeyeon by chae030\n252cf100 - update\nchae030/DataStudy"
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

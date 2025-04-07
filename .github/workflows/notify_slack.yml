@@ -14,7 +14,7 @@ jobs:
         with:
           payload: |
             {
-              "text": "1 new commit pushed to chaeyeon by chae030\n252cf100 - update\nchae030/DataStudy"
+              "text": "*<${{ github.event.compare }}|${{ github.event.commits | length }} new commit(s)> pushed to `${{ github.ref_name }}` by <https://github.com/${{ github.actor }}|${{ github.actor }}>*\n`${{ github.event.head_commit.id }}` - ${{ github.event.head_commit.message }}\n<${{ github.repositoryUrl }}|${{ github.repository }}>"
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

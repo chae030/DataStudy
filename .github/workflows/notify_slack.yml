@@ -1,0 +1,20 @@
+name: Notify Slack on push to chaeyeon
+
+on:
+  push:
+    branches:
+      - chaeyeon
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send message to Slack
+        uses: slackapi/slack-github-action@v1.24.0
+        with:
+          payload: |
+            {
+              "text": "🚀 chaeyeon 브랜치에 push 됐어요! 확인해보세요."
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
